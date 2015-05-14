@@ -9,14 +9,14 @@ class REVESTIMENTO
     float CimentoPortlandCPII, AreiaMedia, Pedreiro, Servente, CalHidratada;
     float Cimento, Areia, Cal, SacoDeCimento, SacoDeCal, TempoDeServicoDoPedreiro, TempoDeServicoDoServente;
 
+public:
+    REVESTIMENTO();
+    ~REVESTIMENTO();
+
     ///Funções Para Setar Valores Para o Programa.
     void set_Chapisco(float Area);
     void set_Reboco(float Area);
     void set_Emboco(float Area);
-
-public:
-    REVESTIMENTO();
-    ~REVESTIMENTO();
 
     ///Funções de Retorno da Classe Para o Programa.
     float get_Cimento()    {return this->Cimento;}
