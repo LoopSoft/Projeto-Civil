@@ -1,0 +1,97 @@
+using UnityEngine;
+using System.Collections;
+
+public class Piso : MonoBehaviour {
+	
+	public float Piso_tatil25x25, Cimento_portlandcpII, Areia_media, Ladrilheiro, servente, Cola_A_base, 
+	Cola_base, Tempo_servico_ladrilheiro, PORCELANATO60X60PORTOBELLO, PISOTATIL25X25, LADRILHEIRO, PISOVINILICO184X950, PISOCERAMICOPEI560X60, ARGAMASSAACII,
+	REJUNTE, PEDREIRO, SERVENTE;
+	public float Piso_Tatil, Pedreiro, Cimento, Areia, Tempo_de_servico_pedreiro, Tempo_de_servico_servente, 
+	Blocos_premoldados, Colchao_areia_media, Colchao_areia, Blocos, Ceramica,PisoTatil,PisoVinilico, Porcelanato,Argamassa,Rejunte,TempodeServicodoPedreiro,
+	TempodeServicodoServente,Tempoemdias; 
+
+	void Piso_Intertravado20x20x04(float Area)
+	{
+		Blocos_premoldados = 50;
+		Colchao_areia_media = 0.1f;
+		Pedreiro = 1.4f;
+		servente = 1.2f;
+		
+		Blocos = Area * Blocos_premoldados;
+		Colchao_areia = Area * Colchao_areia_media;
+		Tempo_de_servico_pedreiro = Area * Pedreiro;
+		Tempo_de_servico_servente = Area * servente;
+	}
+	void Piso_Tatil_Alerta25x25(float Area)
+	{
+		Piso_tatil25x25 = 16;
+		Cola_A_base = 0.8f;
+		Pedreiro = 0.6f;
+		servente = 0.68f;
+		
+		Piso_Tatil = Area * Piso_tatil25x25;
+		Cola_base = Area * Cola_A_base;
+		Tempo_servico_ladrilheiro = Area * Pedreiro;
+		Tempo_de_servico_servente = Area * servente;
+	}
+	
+	void Piso_Tatil_mosaico25x25(float Area)
+	{
+		Piso_tatil25x25 = 16;
+		Cimento_portlandcpII = 2.43f;
+		Areia_media = 0.0366f;
+		Ladrilheiro = 0.6f;
+		servente = 0.68f;
+		
+		Piso_Tatil = Area * Piso_tatil25x25;
+		Cimento = Area * Cimento_portlandcpII;
+		Areia = Area * Areia_media;
+		Tempo_de_servico_pedreiro = Area * Ladrilheiro;
+		Tempo_de_servico_servente = Area * servente;
+		
+	}
+	void PisoCeramico60x60(float AREA)
+	{
+		
+		PISOCERAMICOPEI560X60 = 1.1f;
+		ARGAMASSAACII = 5.71f;
+		REJUNTE = 0.25f;
+		PEDREIRO = 0.4f;
+		SERVENTE = 0.38f;
+		Ceramica = AREA*PISOCERAMICOPEI560X60;
+		Argamassa = AREA*ARGAMASSAACII;
+		Rejunte = AREA*REJUNTE;
+		TempodeServicodoPedreiro = AREA*PEDREIRO;
+		TempodeServicodoServente = AREA*SERVENTE;
+		Tempoemdias = TempodeServicodoPedreiro/8;
+		
+	}
+	void PisoPorcelanato60x60(float AREA)
+	{
+		PORCELANATO60X60PORTOBELLO = 1.1f;
+		ARGAMASSAACII = 5.71f;
+		REJUNTE = 0.25f;
+		PEDREIRO = 0.5f;
+		SERVENTE = 0.68f;
+		Porcelanato = AREA*PORCELANATO60X60PORTOBELLO;
+		Argamassa = AREA*ARGAMASSAACII;
+		Rejunte = AREA*REJUNTE;
+		TempodeServicodoPedreiro = AREA*PEDREIRO;
+		TempodeServicodoServente = AREA*SERVENTE;
+		Tempoemdias = TempodeServicodoPedreiro/8;
+		
+	}
+	void PisoVinilico185x950(float AREA)
+	{
+		PISOVINILICO184X950 = 1.1f;
+
+		PEDREIRO = 0.4f;
+		SERVENTE = 0.3f;
+		PisoVinilico = AREA*PISOVINILICO184X950;
+		TempodeServicodoPedreiro = AREA*PEDREIRO;
+		TempodeServicodoServente = AREA*SERVENTE;
+		Tempoemdias = TempodeServicodoPedreiro/8;
+		
+	}
+
+}
