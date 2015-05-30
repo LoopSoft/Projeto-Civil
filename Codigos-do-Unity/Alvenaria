@@ -1,0 +1,117 @@
+using UnityEngine;
+using System.Collections;
+
+public class Alvenaria : MonoBehaviour
+{
+	private float CIMENTOPORTLANDCPII, AREIAMEDIA, CALHIDRATADA, TIJOLOCERAMICO, PEDREIRO, SERVENTE;
+	public float Qtddetijoloceramico, Qtddeblococeramico, Cimento, Areia, Cal, SacodeCimento,
+	SacodeCal, TempodeServicodoPedreiro,TempodeServicodoServente, TempoTotaldoServico;
+
+	void BlocoCeramicoFurado9x19x39e_9cm(float Area)
+	{
+		CIMENTOPORTLANDCPII = 1.47f;
+		AREIAMEDIA = 0.0098f;
+		CALHIDRATADA = 1.47f;
+		TIJOLOCERAMICO = 13f;
+		PEDREIRO = 0.32f;
+		SERVENTE = 0.4f;
+
+		Qtddeblococeramico = Area * TIJOLOCERAMICO;
+		Cimento = Area * CIMENTOPORTLANDCPII;
+		Area = Area * AREIAMEDIA;
+		Cal = Area * CALHIDRATADA;
+		SacodeCimento = Cimento / 50;
+		SacodeCal = Cal / 20;
+		TempodeServicodoPedreiro = Area * PEDREIRO;
+		TempodeServicodoServente = Area * SERVENTE;
+		TempoTotaldoServico = Area * SERVENTE;
+	}
+	void BlocoCeramicoFurado19x19x39e_19cm(float Area)
+	{
+		CIMENTOPORTLANDCPII = 3.13f;
+		ArMed = 0.209f;
+		CALHIDRATADA = 3.13f;
+		TIJOLOCERAMICO = 13f;
+		PEDREIRO = 0.4f;
+		SERVENTE = 0.57f;
+
+		Qtddeblococeramico = Area * TIJOLOCERAMICO;
+		Cimento = Area * CIMENTOPORTLANDCPII;
+		Area = Area * AREIAMEDIA;
+		Cal = Area * CALHIDRATADA;
+		SacodeCimento = Cimento / 50;
+		SacodeCal = Cal / 20;
+		TempodeServicodoPedreiro = Area * PEDREIRO;
+		TempodeServicodoServente = Area * SERVENTE;
+		TempoTotaldoServico = Area * SERVENTE;
+	}
+	void BlocoConcreto09x19x39e_9cm(float Area)
+	{
+		CIMENTOPORTLANDCPII = 1.25f;
+		AREIAMEDIA = 0.0083f;
+		CALHIDRATADA = 0.32f;
+		TIJOLOCERAMICO = 13.13f;
+		PEDREIRO = 0.66f;
+		SERVENTE = 0.73f;
+
+		Qtddeblococeramico = Area * TIJOLOCERAMICO;
+		Cimento = Area * CIMENTOPORTLANDCPII;
+		Area = Area * AREIAMEDIA;
+		Cal = Area * CALHIDRATADA;
+		SacodeCimento = Cimento / 50;
+		SacodeCal = Cal / 20;
+		TempodeServicodoPedreiro = Area * PEDREIRO;
+		TempodeServicodoServente = Area * SERVENTE;
+		TempoTotaldoServico = Area * SERVENTE;
+	}
+	void BlocoEstruturalConcreto14x19x39e14cm(float Area)
+	{
+		CIMENTOPORTLANDCPII = 5.2f;
+		AREIAMEDIA = 0.013f;
+		CALHIDRATADA = 0.65f;
+		TIJOLOCERAMICO = 13.13f;
+		PEDREIRO = 0.8f;
+		SERVENTE = 0.91f;
+
+		Qtddeblococeramico = Area * TIJOLOCERAMICO;
+		Cimento = Area * CIMENTOPORTLANDCPII;
+		Areia = Area * AREIAMEDIA;
+		Cal = Area * CALHIDRATADA;
+		SacodeCimento = Cimento / 50;
+		SacodeCal = Cal / 20;
+		TempodeServicodoPedreiro = Area * PEDREIRO;
+		TempodeServicodoServente = Area * SERVENTE;
+		TempoTotaldoServico = TempodeServicodoPedreiro / 8;
+	}
+	void TijoloCeramicoFurado09x19x39(float Area)
+	{
+		CIMENTOPORTLANDCPII = 2.18f;
+		AREIAMEDIA = 0.015f;
+		CALHIDRATADA = 2.18f;
+		TIJOLOCERAMICO = 25f;
+		PEDREIRO = 1f;
+		SERVENTE = 1.12f;
+
+		Qtddetijoloceramico = Area * TIJOLOCERAMICO;
+		Cimento = Area * CIMENTOPORTLANDCPII;
+		Areia = Area * AREIAMEDIA;
+		Cal = Area * CALHIDRATADA;
+		SacodeCimento = Cimento / 50;
+		SacodeCal = Cal / 20;
+		TempodeServicodoPedreiro = Area * PEDREIRO;
+		TempodeServicodoServente = Area * SERVENTE;
+		TempoTotaldoServico = TempodeServicodoPedreiro / 8;
+	}
+
+	float get_Qtddetijoloceramico(){return Qtddetijoloceramico;}
+	float get_Qtddeblococeramico(){return Qtddeblococeramico;}
+	float get_Cimento(){return Cimento;}
+	float get_Areia(){return Areia;}
+	float get_Cal(){return Cal;}
+	float get_SacodeCimento(){return SacodeCimento;}
+	float get_SacodeCal(){return SacodeCal;}
+	float get_TempodeServicodoPedreiro(){return TempodeServicodoPedreiro;}
+	float get_TempodeServicodoServente(){return TempodeServicodoServente;}
+	float get_TempoTotaldoServico(){return TempoTotaldoServico;}
+}
+
