@@ -1,0 +1,166 @@
+using UnityEngine;
+using System.Collections;
+
+public class Revestimento : MonoBehaviour
+{
+	public float AreiaMedia, Pedreiro, Servente, CalHidratada, Porcelanato60X60Portobello, ArgamassaACII, REJUNTE,
+	Placas, PisoVinilico, CimentoPortlandCPII;
+	public float Cimento, Areia, Cal, SacoDeCimento, SacoDeCal, TempoDeServiçoDoLadrilheiro, TempoDeServicoDoPedreiro, TempoDeServicoDoServente, Porcelanato, Rejunte,
+	Tempoemdias, Forro, Ceramica, Placas, Argamassa, RejunteQtd, PisoVinilicoQtd, TempoDeServicoMontador, Montador;
+
+	void set_Chapisco(float Area)
+	{
+		CimentoPortlandCPII = 2.43f;
+		AreiaMedia = 0.0061f;
+		Pedreiro = 0.1f;
+		Servente = 0.15f;
+
+		Cimento = Area * CimentoPortlandCPII;
+		Areia = Area * AreiaMedia;
+		SacoDeCimento = Cimento / 50;
+		TempoDeServicoDoPedreiro = Area * Pedreiro;
+		TempoDeServicoDoServente = Area * Servente;
+	}
+	void set_Reboco(float Area)
+	{
+		CimentoPortlandCPII = 3.64f;
+		CalHidratada = 3.64f;
+		AreiaMedia = 0.0243f;
+		Pedreiro = 0.7f;
+		Servente = 0.78f;
+
+		Cimento = Area * CimentoPortlandCPII;
+		Cal = Area * CalHidratada;
+		Areia = Area * AreiaMedia;
+		SacoDeCimento = Cimento / 50;
+		SacoDeCal = Cal / 20;
+		TempoDeServicoDoPedreiro = Area * Pedreiro;
+		TempoDeServicoDoServente = Area * Servente;
+	}
+	void set_Emboco(float Area)
+	{
+		CimentoPortlandCPII = 3.64f;
+		CalHidratada = 3.64f;
+		AreiaMedia = 0.0243f;
+		Pedreiro = 0.6f;
+		Servente = 0.68f;
+		
+		Cimento = Area * CimentoPortlandCPII;
+		Cal = Area * CalHidratada;
+		Areia = Area * AreiaMedia;
+		SacoDeCimento = Cimento / 50;
+		SacoDeCal = Cal / 20;
+		TempoDeServicoDoPedreiro = Area * Pedreiro;
+		TempoDeServicoDoServente = Area * Servente;
+	}
+	void set_RevestimentoPorcelanato60x60(float Area)
+	{
+		Porcelanato60X60Portobello = 1.1f;
+		ArgamassaACII = 5.71f;
+		REJUNTE = 0.25f;
+		Pedreiro = 0.5f;
+		Servente = 0.68f;
+		
+		Porcelanato = Area * Porcelanato60X60Portobello;
+		Argamassa = Area * ArgamassaACII;
+		Rejunte = Area * REJUNTE;
+		TempoDeServicoDoPedreiro = Area * Pedreiro;
+		TempoDeServicoDoServente = Area * Servente;
+		Tempoemdias = TempoDeServicoDoPedreiro / 8;
+	}
+	void set_ForroEmPlacas(float Area){
+		
+		Placas = 1.10f;
+		Montador = 0.50f;
+		Servente = 1.00f;
+		
+		Forro = Area*Placas;
+		TempoDeServicoMontador = Area*Montador;
+		TempoDeServicoDoServente = Area*Servente;
+	}
+	void set_RevestimentoCeramico(float Area){
+		Placas = 1.10f;
+		ArgamassaACII = 5.71f;
+		Rejunte = 0.25f;
+		Pedreiro = 0.40f;
+		Servente = 0.38f;
+		
+		Ceramica = Area*Placas;
+		Argamassa = Area*ArgamassaACII;
+		RejunteQtd = Area*Rejunte;
+		TempoDeServicoDoPedreiro = Area*Pedreiro;
+		TempoDeServicoDoPedreiro = Area*Servente;
+		
+	}
+	void set_RevestimentoVinilico(float Area){
+		PisoVinilico = 1.10f;
+		Pedreiro = 0.40f;
+		Servente = 0.30f;
+		
+		PisoVinilicoQtd = Area*PisoVinilico;
+		TempoDeServicoDoPedreiro = Area*Pedreiro;
+		TempoDeServicoDoServente = Area*Servente;
+	}
+	void Piso_Intertravado20x20x04(float Area)
+{
+    Blocos_premoldados = 50;
+    Colchao_areia_media = 0.1f;
+    Pedreiro = 1.4f;
+    Servente = 1.2f;
+
+    Blocos = Area * this->Blocos_premoldados;
+    Colchao_areia = Area * this->Colchao_areia_media;
+    TempoDeServicoDoPedreiro = Area * this->Pedreiro;
+    TempoDeServicoDoServente = Area * this->Servente;
+}
+
+void Piso_Tatil_Alerta25x25(float Area)
+{
+    Piso_tatil25x25 = 16;
+    Cola_A_base = 0.8f;
+    
+    Pedreiro = 0.6f;
+    Servente = 0.68f;
+
+    Piso_Tatil = Area * this->Piso_tatil25x25;
+    Cola_base = Area * this->Cola_A_base;
+    TempoDeServicoDoPedreiro = Area * this->Pedreiro;
+    TempoDeServicoDoServente = Area * this->Servente;
+}
+
+void Piso_Tatil_mosaico25x25(float Area)
+{
+    Piso_tatil25x25 = 16;
+    Cimento_portlandcpII = 2.43f;
+    Areia_media = 0.0366f;
+    Ladrilheiro = 0.6f;
+    Servente = 0.68f;
+
+    Piso_Tatil = Area * this->Piso_tatil25x25;
+    Cimento = Area * this->Cimento_portlandcpII;
+    Areia = Area * this->Areia_media;
+    TempoDeServiçoDoLadrilheiro = Area * this->Ladrilheiro;
+    TempoDeServicoDoServente = Area * this->servente;
+
+}
+	float get_Cimento(){return Cimento;}
+	float get_Areia(){return Areia;}
+	float get_Cal(){return Cal;}
+	float get_SacoDeCimento(){return SacoDeCimento;}
+	float get_SacoDeCal(){return SacoDeCal;}
+	float get_TempoDeServicoDoPedreiro(){return TempoDeServicoDoPedreiro;}
+	float get_TempoDeServicoDoServente(){return TempoDeServicoDoServente;}
+	float get_Porcelanato60X60Portobello(){return Porcelanato60X60Portobello;}
+	float get_ArgamassaACII(){return Argamassa;}
+	float get_REJUNTE(){return REJUNTE;}
+	float get_Pedreiro(){return Pedreiro;}
+	float get_Servente(){return Servente;}
+	float get_Forro(){return Forro;}
+	float get_Ceramica(){return Ceramica;}
+	float get_Argamassa(){return Argamassa;}
+	float get_RejunteQtd(){return PisoVinilicoQtd;}
+	float get_Cimenti(){return Cimento;}
+	float get_TempoDeServicoMontador(){return TempoDeServicoMontador;}
+	float get_TempoDeServicoPedreiro(){return TempoDeServicoDoPedreiro;}
+	float get_TempoDeServicoServente(){return TempoDeServicoDoServente;}
+}
