@@ -1,0 +1,70 @@
+using UnityEngine;
+using System.Collections;
+
+public class Telhado : MonoBehaviour {
+
+	private float CARPINTEIRO, AJUDANTE, MADEIRA_DE_LEI_NATIVA15_NAO_PARELHADA, MADEIRA_DE_LEI_56CM_NAO_PARELHADA, PREGO_POLIDO_COMCABECA1825, 
+	TELHA_COLONIAL, TELHA_PAULISTA, TELHA_FRANCESA, TELHA_PORTUGUESA,TELHA_ITALIANA, TELHA_ROMANA;
+	public float Carpinteiro, Ajudante, Madeira_de_Lei_Nativa15_nao_aparelhada, Madeira_de_Lei56cm_nao_aparelhada, Prego_Polido_com_Cabeca1825, TempodeServico,
+	Telha_Colonial_QtdTotal, Telha_Paulista_QtdTotal, Telha_Francesa_QtdTotal, Telha_Portuguesa_QtdTotal, Telha_Italiana_QtdTotal, Telha_Romana_QtdTotal;
+
+	public void GradeadodeCaibroseRipas(float MetrosQuadrados)
+	{
+		CARPINTEIRO = 0.36f;
+		AJUDANTE = 0.36f;
+		MADEIRA_DE_LEI_NATIVA15_NAO_PARELHADA = 4.2f;
+		MADEIRA_DE_LEI_56CM_NAO_PARELHADA = 2.46f;
+		PREGO_POLIDO_COMCABECA1825 = 0.1f;
+		
+		Carpinteiro = MetrosQuadrados * CARPINTEIRO;
+		Ajudante = MetrosQuadrados * AJUDANTE;
+		Madeira_de_Lei_Nativa15_nao_aparelhada = MetrosQuadrados * MADEIRA_DE_LEI_NATIVA15_NAO_PARELHADA;
+		Madeira_de_Lei56cm_nao_aparelhada = MetrosQuadrados * MADEIRA_DE_LEI_56CM_NAO_PARELHADA;
+		Prego_Polido_com_Cabeca1825 = MetrosQuadrados * PREGO_POLIDO_COMCABECA1825;
+		TempodeServico = Carpinteiro / 8;  
+	}
+	public void set_TelhaColonial(float MetrosQuadrados){
+		TELHA_COLONIAL = 25.0f;
+		
+		Telha_Colonial_QtdTotal = MetrosQuadrados * TELHA_COLONIAL;
+	}
+	public void set_TelhaPaulista(float MetrosQuadrados){
+		TELHA_PAULISTA = 25.0f;
+		
+		Telha_Paulista_QtdTotal = MetrosQuadrados * TELHA_PAULISTA;
+	}
+	public void set_TelhaFrancesa(float MetrosQuadrados){
+		TELHA_FRANCESA = 16.0f;
+		
+		Telha_Francesa_QtdTotal = MetrosQuadrados * TELHA_FRANCESA;
+	}
+	public void TelhaPortuguesa(float MetrosQuadrados)
+	{
+		TELHA_PORTUGUESA = 16f;
+		Telha_Portuguesa_QtdTotal = MetrosQuadrados * TELHA_PORTUGUESA;
+	}
+	public void TelhaItaliana(float MetrosQuadrados)
+	{
+		TELHA_ITALIANA = 13.50f;
+		Telha_Italiana_QtdTotal = MetrosQuadrados * TELHA_ITALIANA;
+	}
+	public void TelhaRomana(float MetrosQuadrados)
+	{
+		TELHA_ROMANA = 16f;
+		Telha_Romana_QtdTotal = MetrosQuadrados * TELHA_ROMANA;
+	}
+
+	public float get_Carpinteiro(){return Carpinteiro;} 
+	public float get_Ajudante(){return Ajudante;} 
+	public float get_MadeiradeLeiNativa15naoaparelhada(){return Madeira_de_Lei_Nativa15_nao_aparelhada;} 
+	public float get_MadeiradeLei56cmnaoaparelhada(){return Madeira_de_Lei56cm_nao_aparelhada;} 
+	public float get_PregoPolidocomCabeca1825(){return Prego_Polido_com_Cabeca1825;} 
+	public float get_TempodeServico(){return TempodeServico;}
+	public float get_TelhaColonialQtdTotal(){return Telha_Colonial_QtdTotal;}
+	public float get_TelhaPaulistaQtdTotal(){return Telha_Paulista_QtdTotal;}
+	public float get_TelhaFrancesaQtdTotal(){return Telha_Francesa_QtdTotal;}
+	public float Get_TelhaPortuguesa(){return Telha_Portuguesa_QtdTotal;}
+	public float Get_TelhaItaliana(){return Telha_Italiana_QtdTotal;}
+	public float Get_TelhaRomana(){return Telha_Romana_QtdTotal;}
+
+}
