@@ -158,8 +158,8 @@ void Piso_Tatil_mosaico25x25(float Area)
 	float get_Forro(){return Forro;}
 	float get_Ceramica(){return Ceramica;}
 	float get_Argamassa(){return Argamassa;}
-	float get_RejunteQtd(){return PisoVinilicoQtd;}
-	float get_Cimenti(){return Cimento;}
+	float get_RejunteQtd(){return RejunteQtd;}
+	float get_Cimento(){return Cimento;}
 	float get_TempoDeServicoMontador(){return TempoDeServicoMontador;}
 	float get_TempoDeServicoPedreiro(){return TempoDeServicoDoPedreiro;}
 	float get_TempoDeServicoServente(){return TempoDeServicoDoServente;}
