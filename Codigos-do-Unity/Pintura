@@ -8,10 +8,10 @@ public class Pintura : MonoBehaviour
 
 	void set_EmassamentodeParedeExternas2demão(float Area)
 	{
-		Pintor = 0,35;
-		AjudantedePintor = 0,25;
-		MassaAcrílica = 0,7;
-		Lixa = 0,5;
+		Pintor = 0,35f;
+		AjudantedePintor = 0,25f;
+		MassaAcrílica = 0,7f;
+		Lixa = 0,5f;
 
 		Pint = Area * Pintor;
 		AjudPint = Area * AjudantedePintor;
