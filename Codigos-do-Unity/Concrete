@@ -1,0 +1,53 @@
+using UnityEngine;
+using System.Collections;
+
+public class Concreto : MonoBehaviour
+{
+	public float AreiaMedia, Servente, brita1, brita2, CP-II-E-32;
+	public float Serv, ArMed, B1, B2, CP32, SacosdeCimento ;
+
+	void set_35Mpa(float Area)
+	{
+		Servente = 6;
+		AreiaMedia = 0,787;
+		brita1 = 0,209;
+		brita2 = 0,627;
+		CP-II-E-32 = 448;
+
+		Serv = Area * Servente;
+		ArMed = Area * AreiaMedia;
+	  B1 = Area * brita1;
+	  B2 = Area * brita2;
+	  CP32 = Area * CP-II-E-32;
+	  SacosdeCimento = CP-II-E-32 / 50;
+	  
+	}
+	void set_40 Mpa(float Area)
+	{
+		Servente = 6;
+		AreiaMedia = 0,739;
+		brita1 = 0,209;
+		brita2 = 0,627;
+		CP-II-E-32 = 507;
+		
+		Serv = Area * Servente;
+		ArMed = Area * AreiaMedia;
+	  B1 = Area * brita1;
+	  B2 = Area * brita2;
+	  CP32 = Area * CP-II-E-32;
+	  SacosdeCimento = CP-II-E-32 / 50;
+	
+}
+	float get_AreiaMedia(){return AreiaMedia;}
+	float get_Servente(){return Servente;}
+	float get_brita1(){return brita1;}
+	float get_brita2(){return brita2;}
+	float get_CP-II-E-32(){return CP-II-E-32;}
+	float get_Serv(){return Serv;}
+	float get_ArMed(){return ArMed;}
+	float get_B1(){return B1;}
+	float get_B2(){return B2;}
+	float get_CP32(){return CP32;}
+	float get_SacosdeCimento(){return SacosdeCimento;}
+
+}
