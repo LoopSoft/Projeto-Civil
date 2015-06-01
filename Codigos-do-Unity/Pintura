@@ -1,0 +1,35 @@
+using UnityEngine;
+using System.Collections;
+
+public class Pintura : MonoBehaviour
+{
+	public float Pintor, AjudantedePintor, MassaAcrílica, Lixa;
+	public float Pint, AjudPint, MassAcríl, Lx, TempServ;
+
+	void set_EmassamentodeParedeExternas2demão(float Area)
+	{
+		Pintor = 0,35;
+		AjudantedePintor = 0,25;
+		MassaAcrílica = 0,7;
+		Lixa = 0,5;
+
+		Pint = Area * Pintor;
+		AjudPint = Area * AjudantedePintor;
+		MassAcríl = Area * MassaAcrílica;
+		Lx = Area * Lixa;
+		TempServ = Pint / 8;
+		
+	}
+	
+}
+	float get_Pintor(){return Pintor;}
+	float get_AjudantedePintor(){return AjudantedePintor;}
+	float get_MassaAcrílica(){return MassaAcrílica;}
+	float get_Lixa(){return Lixa;}
+	float get_Pint(){return Pint;}
+	float get_AjudPint(){return AjudPint;}
+	float get_MassAcríl(){return MassAcríl;}
+	float get_Lx(){return Lx;}
+	float get_TempServ(){return TempServ;}
+	
+}
