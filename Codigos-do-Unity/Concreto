@@ -9,11 +9,11 @@ public class Concreto : MonoBehaviour
 	void set_35Mpa(float Area)
 	{
 		Servente = 6;
-		AreiaMedia = 0,787;
-		brita1 = 0,209;
-		brita2 = 0,627;
+		AreiaMedia = 0,787f;
+		brita1 = 0,209f;
+		brita2 = 0,627f;
 		CP-II-E-32 = 448;
-
+	
 		Serv = Area * Servente;
 		ArMed = Area * AreiaMedia;
 	  B1 = Area * brita1;
@@ -25,9 +25,9 @@ public class Concreto : MonoBehaviour
 	void set_40 Mpa(float Area)
 	{
 		Servente = 6;
-		AreiaMedia = 0,739;
-		brita1 = 0,209;
-		brita2 = 0,627;
+		AreiaMedia = 0,739f;
+		brita1 = 0,209f;
+		brita2 = 0,627f;
 		CP-II-E-32 = 507;
 		
 		Serv = Area * Servente;
@@ -49,5 +49,4 @@ public class Concreto : MonoBehaviour
 	float get_B2(){return B2;}
 	float get_CP32(){return CP32;}
 	float get_SacosdeCimento(){return SacosdeCimento;}
-
 }
